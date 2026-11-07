@@ -1,0 +1,55 @@
+
+<html>
+<head>
+<title>JavaScript String and Math Objects</title>
+</head>
+<body >
+<h1><center>JS String & math Functions</center></h1>
+<h2>1. String Object Functions</h2>
+Enter a String:
+<input type="text" id="str">
+<button onclick="stringFunctions()">Submit</button>
+<p id="stringResult"></p>
+<script>
+function stringFunctions()
+{
+var str = document.getElementById("str").value;
+var result = "<b>Original String = </b>" + str + "<br><br>";
+result += "1. Length: " + str.length + "<br>";
+result += "2. Uppercase: " + str.toUpperCase() + "<br>";
+result += "3. Lowercase: " + str.toLowerCase() + "<br>";
+result += "4. Character at position 1: " + str.charAt(1) + "<br>";
+result += "5. Index of Java: " + str.indexOf("Java") + "<br>";
+result += "6. Slice: " + str.slice(0, 5) + "<br>";
+result += "7. Replace: " + str.replace("Hello", "Welcome") + "<br>";
+result += "8. Concatenation: " + str.concat(" Programming") + "<br>";
+result += "9. Trim: " + (" " + str + " ").trim() + "<br>";
+document.getElementById("stringResult").innerHTML = result;
+}
+</script>
+<hr>
+<h2>2. Math Object Functions</h2>
+Enter a Number:
+<input type="number" id="num" step="any">
+<button onclick="mathFunctions()">Submit</button>
+<p id="mathResult"></p>
+<script>
+function mathFunctions()
+{
+var num = Number(document.getElementById("num").value);
+var result = "<b>Original Number = </b>" + num + "<br><br>";
+result += "1. Absolute Value: " + Math.abs(num) + "<br>";
+result += "2. Round: " + Math.round(num) + "<br>";
+result += "3. Ceil: " + Math.ceil(num) + "<br>";
+result += "4. Floor: " + Math.floor(num) + "<br>";
+result += "5. Square Root: " + Math.sqrt(num) + "<br>";
+result += "6. Power to 3: " + Math.pow(num, 3) + "<br>";
+result += "7. Maximum (10,20,30): " + Math.max(10,20,30) + "<br>";
+result += "8. Minimum (10,20,30): " + Math.min(10,20,30) + "<br>";
+result += "9. Random Number: " + Math.random() + "<br>";
+result += "10. PI Value: " + Math.PI + "<br>";
+document.getElementById("mathResult").innerHTML = result;
+}
+</script>
+</body>
+</html>
